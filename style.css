@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'ValentineFont';
+    src: url('fonts/valentine.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/1.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TimerFont';
+    src: url('fonts/2.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'LoveFont';
+    src: url('fonts/3.otf') format('opentype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('https://i.imgur.com/FDTDFHT.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1550px;
+}
+
+.valentine-text {
+    font-family: 'ValentineFont', sans-serif;
+    font-size: 48px;
+    color: black;
+    text-align: center;
+    margin-top: 10%;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.image-grid img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    outline: none;
+}
+
+.image-grid img:hover {
+    transform: scale(1.1);
+}
+
+.timer-container {
+    font-family: 'TimerFont', sans-serif;  
+    letter-spacing: 2px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 3px solid peru;
+    display: inline-block;
+    font-size: 1.2rem;
+    max-width: 100%;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#count-time {
+    font-family: 'TimerFont', sans-serif; /* Correctly applying font */
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+#timer {
+    font-family: 'TimerFont', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: peru; 
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+.long-paragraph-box {
+    background-color: burlywood;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    margin-top: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    overflow: hidden;
+}
+
+.long-paragraph-box p {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 1.2rem; /* Fixed from 1.20rem (decimal is unnecessary) */
+    color: #333;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+.love-text {
+    font-family: 'LoveFont', sans-serif;
+    font-size: 3rem;
+    color: brown; /* Changed comment to match the actual color */
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
